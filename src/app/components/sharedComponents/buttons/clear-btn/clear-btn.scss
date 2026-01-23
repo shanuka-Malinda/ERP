@@ -1,0 +1,18 @@
+.clear-btn {
+  padding: 8px 18px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #9E9E9E;
+  color: #fff;
+  font-weight: 500;
+
+  &:disabled {
+    background-color: #b0b0b0;
+    cursor: not-allowed;
+  }
+
+  i {
+    margin-right: 6px;
+  }
+}

@@ -1,0 +1,15 @@
+<button
+  type="button"
+  class="cancel-btn"
+  [disabled]="disabled || loading"
+  (click)="onClick()"
+>
+  <span *ngIf="!loading">
+    <i *ngIf="icon" class="{{ icon }}"></i>
+    {{ label }}
+  </span>
+
+  <span *ngIf="loading">
+    Cancelling...
+  </span>
+</button>

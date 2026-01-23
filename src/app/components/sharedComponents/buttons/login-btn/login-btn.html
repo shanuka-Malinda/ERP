@@ -1,0 +1,16 @@
+<button
+  type="button"
+  class="login-btn"
+  [disabled]="disabled || loading"
+  (click)="onClick()"
+>
+  <span *ngIf="!loading">
+    <i *ngIf="icon" class="{{ icon }}"></i>
+    {{ label }}
+  </span>
+
+  <span *ngIf="loading">
+    login...
+  </span>
+</button>
+

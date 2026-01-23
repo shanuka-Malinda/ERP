@@ -1,0 +1,27 @@
+.login-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 2px 2px 10px 5px rgba(0,0,0,0.1);
+    width: 400px;
+    padding: 20px;
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+}
+.form-header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.form-body{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-footer{
+    display: flex;
+    justify-content:flex-end;
+    gap: 10px;
+}

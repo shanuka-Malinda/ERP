@@ -1,0 +1,16 @@
+<div class="login-form">
+  <div class="form-header">
+    Login
+  </div>
+  <div class="form-body">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="username">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password">
+  </div>
+  <div class="form-footer">
+    <app-clear-btn label="Clear" [loading]="loadingClear" [disabled]="false" (clear)="clear()"></app-clear-btn>
+    <app-login-btn label="Login" [loading]="loadingLogin" [disabled]="false" (login)="login()"></app-login-btn>
+  </div>
+</div>
