@@ -1,13 +1,66 @@
-<div class="login-form">
-  <div class="form-header">
-    Login
-  </div>
-  <div class="form-body">
-    <app-input label="Username" placeholder="Enter username" [required]="true"></app-input>
-    <app-input label="Password" type="password" placeholder="Enter password" [required]="true"></app-input>
-  </div>
-  <div class="form-footer">
-    <app-clear-btn label="Clear" [loading]="loadingClear" [disabled]="false" (clear)="clear()"></app-clear-btn>
-    <app-login-btn label="Login" [loading]="loadingLogin" [disabled]="false" (login)="login()"></app-login-btn>
+<div class="auth-page">
+  <div class="auth-card">
+    <div class="auth-left">
+      <div class="brand">
+        <div class="logo">E</div>
+        <div class="brand-text">
+          <div class="brand-name">ERP</div>
+          <div class="brand-sub">Secure access to your workspace</div>
+        </div>
+      </div>
+
+      <div class="welcome">
+        <h1>Welcome back</h1>
+        <p>Log in to continue managing invoices, stock, and accounts.</p>
+      </div>
+
+      <div class="badges">
+        <span class="badge">Fast</span>
+        <span class="badge">Secure</span>
+        <span class="badge">Reliable</span>
+      </div>
+    </div>
+
+    <div class="auth-right">
+      <div class="form-header">
+        <div class="title">Login</div>
+        <div class="subtitle">Enter your credentials to continue</div>
+      </div>
+
+      <div class="form-body">
+        <app-input label="Username" placeholder="Enter username" [required]="true"></app-input>
+        <app-input label="Password" type="password" placeholder="Enter password" [required]="true"></app-input>
+
+        <div class="row">
+          <label class="remember">
+            <input type="checkbox" />
+            Remember me
+          </label>
+
+          <a class="link" href="javascript:void(0)">Forgot password?</a>
+        </div>
+      </div>
+
+      <div class="form-footer">
+        <app-clear-btn
+          label="Clear"
+          [loading]="loadingClear"
+          [disabled]="false"
+          (clear)="clear()"
+        ></app-clear-btn>
+
+        <app-login-btn
+          label="Login"
+          [loading]="loadingLogin"
+          [disabled]="false"
+          (login)="login()"
+        ></app-login-btn>
+      </div>
+
+      <div class="bottom-text">
+        <!-- <span>Need help?</span>
+        <a class="link" href="javascript:void(0)">Contact support</a> -->
+      </div>
+    </div>
   </div>
 </div>
