@@ -1,0 +1,77 @@
+<div class="field">
+  <label *ngIf="label" class="label" [attr.for]="inputId">
+    {{ label }} <span *ngIf="required" class="req">*</span>
+  </label>
+
+  <div class="input-wrap" [class.error]="showError" [class.disabled]="disabled">
+    <input
+      [id]="inputId"
+      class="input"
+      [type]="actualType"
+      [placeholder]="placeholder"
+      [value]="value"
+      [disabled]="disabled"
+      [readonly]="readonly"
+      [attr.autocomplete]="autocomplete"
+      [attr.min]="min"
+      [attr.max]="max"
+      [attr.step]="step"
+      (input)="handleInput($event)"
+      (blur)="markTouched()"
+    />
+
+    <!-- password toggle -->
+    <button
+      *ngIf="type === 'password'"
+      type="button"
+      class="toggle"
+      (click)="togglePassword()"
+      [disabled]="disabled"
+      aria-label="Toggle password visibility"
+    >
+      {{ isPasswordVisible ? 'Hide' : 'Show' }}
+    </button>
+  </div>
+
+  <div class="hint" *ngIf="hint && !showError">{{ hint }}</div>
+  <div class="error-text" *ngIf="showError">{{ firstErrorMessage }}</div>
+</div>
+
+
+
+
+
+<!-- <form [formGroup]="form">
+  <app-input
+    label="Username"
+    placeholder="Enter username"
+    formControlName="username"
+    [required]="true"
+  ></app-input>
+
+  <app-input
+    label="Password"
+    type="password"
+    placeholder="Enter password"
+    formControlName="password"
+    [required]="true"
+  ></app-input>
+
+  <app-input
+    label="Age"
+    type="number"
+    placeholder="18+"
+    [min]="18"
+    [max]="80"
+    formControlName="age"
+  ></app-input>
+
+  <app-input
+    label="Email"
+    type="email"
+    placeholder="name@example.com"
+    formControlName="email"
+    [required]="true"
+  ></app-input>
+</form> -->
+
